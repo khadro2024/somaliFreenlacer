@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "packages": {
+    "dotnet": "8"
+  },
+  "steps": {
+    "build": {
+      "commands": [
+        "dotnet restore backend/SomaliFreelanceMarketplace.csproj",
+        "dotnet publish backend/SomaliFreelanceMarketplace.csproj -c Release -o /app/publish --no-restore"
+      ]
+    }
+  },
+  "deploy": {
+    "startCommand": "dotnet /app/publish/SomaliFreelanceMarketplace.dll",
+    "variables": {
+      "ASPNETCORE_ENVIRONMENT": "Production"
+    }
+  }
+}
