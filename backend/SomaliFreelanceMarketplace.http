@@ -1,0 +1,6 @@
+@SomaliFreelanceMarketplace_HostAddress = http://localhost:5028
+
+GET {{SomaliFreelanceMarketplace_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
